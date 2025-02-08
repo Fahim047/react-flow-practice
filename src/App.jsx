@@ -11,7 +11,7 @@ const App = () => {
 				className="bg-yellow-600 cursor-pointer text-white px-4 py-2 rounded-md"
 				onClick={() => setIsPractice((prev) => !prev)}
 			>
-				{isPractice ? 'Switch to Practice' : 'Switch to Payment Flow'}
+				{isPractice ? 'Switch to Payment Flow' : 'Switch to Practice'}
 			</button>
 			{isPractice ? <Flow /> : <PaymentFlow />}
 		</div>
