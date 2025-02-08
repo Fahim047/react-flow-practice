@@ -8,25 +8,17 @@ import {
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import { useCallback, useState } from 'react';
-import CustomEdge from './components/CustomEdge';
-import CustomNode from './components/CustomNode';
-import PaymentCountry from './components/PaymentCountry';
-import PaymentInit from './components/PaymentInit';
-import PaymentProvider from './components/PaymentProvider';
-import { initialNodes } from './data';
+import CustomEdge from './CustomEdge';
+import CustomNode from './CustomNode';
 
 const nodeTypes = {
 	customNode: CustomNode,
-	paymentInit: PaymentInit,
-	paymentCountry: PaymentCountry,
-	paymentProvider: PaymentProvider,
 };
 const edgeTypes = {
 	customEdge: CustomEdge,
 };
 const Flow = () => {
-	console.log('rendering app...');
-	const [nodes, setNodes] = useState(initialNodes);
+	const [nodes, setNodes] = useState([]);
 	const [edges, setEdges] = useState([]);
 
 	const onNodesChange = useCallback(
